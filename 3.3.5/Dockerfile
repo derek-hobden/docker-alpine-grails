@@ -2,7 +2,7 @@ FROM openjdk:alpine
 
 ENV GRAILS_VERSION 3.3.5
 
-RUN apk upgrade && apk update && apk add wget unzip bash
+RUN apk upgrade && apk update && apk add wget unzip bash yarn
 
 # Install Grails
 WORKDIR /usr/lib/jvm
@@ -26,6 +26,7 @@ RUN wget https://codeload.github.com/grails/grails-profile-repository/zip/master
 RUN mkdir /app
 
 EXPOSE 8080
+EXPOSE 3000
 
 # Set Workdir
 WORKDIR /app
