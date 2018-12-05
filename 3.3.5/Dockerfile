@@ -1,4 +1,4 @@
-FROM openjdk:alpine
+FROM openjdk:8
 
 # Setup Grails path.
 ENV GRAILS_HOME /usr/lib/jvm/grails
